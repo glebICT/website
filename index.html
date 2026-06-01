@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdApp</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- خلفية الفضاء -->
+    <video autoplay muted loop id="bg-video">
+        <source src="space.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <h1>IdApp</h1>
+        <output id="level">1</output>
+        <output id="score">0</output>
+    </header>
+
+    <main>
+        <form onsubmit="check(event)">
+            <p>🌌 Identify the object shown in the video</p>
+
+            <input
+                type="text"
+                id="userAnswer"
+                name="userAnswer"
+                placeholder="Type your answer here"
+                required
+            >
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <video id="videoPlayer" width="640" height="360" controls>
+            <source src="nebula.mp4" type="video/mp4">
+        </video>
+    </main>
+
+</body>
+</html>
